@@ -11,6 +11,7 @@ import UIKit
 public typealias WeekdaySymbolType = CVWeekdaySymbolType
 
 public final class CVCalendarMenuView: UIView {
+    public var dateFormatter = NSDateFormatter()
     public var symbols = [String]()
     public var symbolViews: [UILabel]?
 
@@ -72,7 +73,6 @@ public final class CVCalendarMenuView: UIView {
 
     public func createDaySymbols() {
         // Change symbols with their places if needed.
-        let dateFormatter = NSDateFormatter()
         var weekdays: NSArray
 
         switch weekdaySymbolType! {
